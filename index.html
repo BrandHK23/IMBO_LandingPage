@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMBO</title>
+    <!-- CSS -->
+    <link href="/dist/output.css" rel="stylesheet" />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Righteous&family=Work+Sans:wght@100;200;300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="py-8 lg:pt-6 lg:pb-14">
+      <div
+        class="container mx-auto lg:relative flex flex-col lg:flex-row lg:justify-between gap-y-4 lg:gap-y-0"
+      >
+        <!-- logo -->
+        <div class="flex justify-center lg:justify-normal">
+          <a href="#">
+            <img src="./assets/img/header/logo.png" alt="" />
+          </a>
+        </div>
+        <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 lg:gap-y-0">
+          <!-- Location-->
+          <div
+            class="flex justify-center items-center gap-x-2 lg:justify-normal"
+          >
+            <i class="ri-map-pin-2-fill text-2xl text-accent"></i>
+            <a
+              href="https://www.google.com.mx/maps/place/Instituto+Mexicano+de+Biolog%C3%ADa+Oral/@19.6922815,-101.1656515,21z/data=!4m15!1m8!3m7!1s0x842d0ba2b29da7e3:0x4016978679c8620!2sMorelia,+Mich.!3b1!8m2!3d19.7059504!4d-101.1949825!16zL20vMDFidHN5!3m5!1s0x842d0db418ab3f23:0xf61f327166267c96!8m2!3d19.6922815!4d-101.1655147!16s%2Fg%2F11mw7kl_gj?entry=ttu"
+            >
+              <div class="text-secondary">
+                H. Colegio Militar 528, Morelia, Mich.
+              </div>
+            </a>
+          </div>
+          <!--phone-->
+          <div
+            class="flex justify-center items-center gap-x-2 lg:justify-normal"
+          >
+            <i class="ri-phone-fill text-2xl text-accent"></i>
+            <div class="text-secondary">(+52) 443 476 4107</div>
+          </div>
+          <!--btn-->
+          <button
+            class="btn btn-sm btn-outline w-[240px] lg:w-auto mx-auto lg:mx-0"
+          >
+            Contáctanos
+          </button>
+          <!--mobile nav-->
+          <nav
+            class="mnav bg-white fixed w-[300px] top-0 h-screen -left-[300px] shadow-2xl lg:hidden transition-all duration-300 z-20"
+          >
+            <!--nav trigger btn-->
+            <div
+              class="mnav__close-btn bg-primary w-8 h-8 relative -right-full top-8 flex justify-center items-center rounded-tr-lg rounded-br-lg cursor-pointer transition-all"
+            >
+              <i
+                class="mnav__close-btn-icon ri-arrow-right-s-line text-2xl text-white"
+              ></i>
+            </div>
+            <!--logo, list, form-->
+            <div class="px-12 flex flex-col gap-y-12 h-full">
+              <!--logo-->
+              <a href="#">
+                <img src="assets/img/header/logo.png" alt="" />
+              </a>
+              <ul>
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent transition-all"
+                    >INICIO</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent transition-all"
+                    >ESTUDIA</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent transition-all"
+                    >CONÓCENOS</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent transition-all"
+                    >ADMISIONES</a
+                  >
+                </li>
+              </ul>
+              <!--form-->
+              <form class="relative flex gap-x-[10px]">
+                <label for="">
+                  <i class="ri-search-2-line text-2xl text-accent"></i>
+                </label>
+                <input
+                  type="text"
+                  id="mnav-search-input"
+                  placeholder="Buscar..."
+                  class="outline-none w-[160px] border-b-2 focus:border-b-2 focus:border-accent placeholder:italic"
+                />
+              </form>
+            </div>
+          </nav>
+          <!--Desktop nav-->
+          <nav
+            class="bg-white absolute w-full left-0 -bottom-[86px] shadow-custom1 h-16 rounded-[10px] hidden lg:flex lg:items-center lg:justify-between lg:px-[50px]"
+          >
+            <ul class="flex gap-x-4">
+              <li>
+                <a
+                  href="#"
+                  class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                  >INICIO</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                  >ESTUDIA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                  >CONÓCENOS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-secondary hover:text-accent transition-all duration-300"
+                  >ADMISIONES</a
+                >
+              </li>
+            </ul>
+            <form class="relative flex gap-x-[10px]">
+              <label
+                for="search-input"
+                class="flex justify-center items-center group"
+              >
+                <i class="ri-search-2-line text-2xl text-accent"></i>
+              </label>
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Buscar..."
+                class="outline-none w-[100px] focus:w[180px] focus:border-b-2 focus:border-accent placeholder:italic placeholder:text-base transition-all duration-150"
+              />
+            </form>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- hero -->
+    <section class="hero bg-blue-100 py-12 xl:pt-12 xl:pb-0 overflow-hidden">
+      <div class="container mx-auto h-full">
+        <!-- text & img-->
+        <div
+          class="flex flex-col xl:flex-row items-center justify-between h-full"
+        >
+          <!-- text -->
+          <div class="hero__text xl:w-[48%] text-center xl:text-left">
+            <!-- badge -->
+            <div
+              class="flex items-center bg-white py-[10px] w-max gap-x-2 mb-[26px] rounded-full mx-auto xl:mx-0"
+            >
+              <!-- badge icon-->
+              <i class="ri-graduation-cap-line text-2xl text-accent"></i>
+              <div
+                class="uppercase text-base font-medium text-[#3e8ea9] tracking-[2.24px]"
+              >
+                Practica tu especialidad con seguridad
+              </div>
+            </div>
+            <!-- title -->
+            <h1 class="h1 mb-6">Desarrolla tu potencial</h1>
+            <!-- desc -->
+            <p class="mb-[42px] md:max-w-xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
+              officiis incidunt exercitationem, odio nemo, enim sint voluptates
+              quasi possimus.
+            </p>
+            <!-- btn -->
+            <button class="btn btn-lg btn-accent mx-auto xl:mx-0">
+              Contáctanos
+            </button>
+          </div>
+          <!-- img -->
+          <div class="hero__img hidden xl:flex max-w-[814px] self-end">
+            <img src="assets/img/hero/img.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end hero-->
+
+    <!-- specialty -->
+    <section class="specialty section text-center">
+      <div class="container mx-auto">
+        <!-- wrapper -->
+        <div class="flex flex-col xl:flex-row gap-y-6 justify-between">
+          <!-- item -->
+          <div
+            class="stats__item flex-1 xl:border-r flex flex-col items-center"
+          >
+            <div
+              class="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2"
+            >
+              Especialidad en ortodoncia
+            </div>
+            <div>
+              Desde la técnica convenional, hasta el autoligado Sistema Damon y
+              ortodoncia con alineadores.
+            </div>
+          </div>
+          <!-- item -->
+          <div class="stats__item flex-1 flex flex-col items-center">
+            <div
+              class="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2"
+            >
+              Especialidad en ortodoncia
+            </div>
+            <div>
+              Desde la técnica convenional, hasta el autoligado Sistema Damon y
+              ortodoncia con alineadores.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end specialty -->
+
+    <!-- services -->
+    <section class="services">
+      <!-- bg -->
+      <div
+        class="bg-services bg-cover bg-no-repeat max-w-[1466px] mx-4 xl:mx-auto rounded-[20px] xl:pt-[70px] px-6 xl:px-0 relative h-[368px] flex items-center xl:items-start -z-10"
+      >
+        <div class="container mx-auto">
+          <!-- text-->
+          <div
+            class="services__top flex items-center flex-col xl:flex-row xl:mb-[60px]"
+          >
+            <h2
+              class="h2 text-white flex-1 mb-4 xl:mb-0 text-center xl:text-left"
+            >
+              Estudia con los expertos
+            </h2>
+            <p class="text-white flex-1 text-center xl:text-left max-w-2xl">
+              Tu programa de especialidad con validez oficial de la SEP creado
+              por profesionales expertos.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--grid container-->
+      <div class="container mx-auto mt-8 xl:-mt-[144px]">
+        <!-- grid -->
+        <div class="grid xl:grid-cols-4 gap-5 px-8 xl:px-0">
+          <!-- grid item -->
+          <div
+            class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[288] flex flex-col items-center text-center"
+          >
+            <!-- grid item icon -->
+            <div class="mb-[15px]">
+              <img src="assets/icons/services/user-id-svgrepo-com.svg" alt="" />
+            </div>
+            <!-- grid item title -->
+            <h3 class="h3 mb-[10px]">Profesores</h3>
+            <!-- grid item description-->
+            <p class="leading-normal max-w-[300px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- grid item -->
+          <div
+            class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[288] flex flex-col items-center text-center"
+          >
+            <!-- grid item icon -->
+            <div class="mb-[15px]">
+              <img src="assets/icons/services/user-id-svgrepo-com.svg" alt="" />
+            </div>
+            <!-- grid item title -->
+            <h3 class="h3 mb-[10px]">Profesores</h3>
+            <!-- grid item description-->
+            <p class="leading-normal max-w-[300px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- grid item -->
+          <div
+            class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[288] flex flex-col items-center text-center"
+          >
+            <!-- grid item icon -->
+            <div class="mb-[15px]">
+              <img src="assets/icons/services/user-id-svgrepo-com.svg" alt="" />
+            </div>
+            <!-- grid item title -->
+            <h3 class="h3 mb-[10px]">Profesores</h3>
+            <!-- grid item description-->
+            <p class="leading-normal max-w-[300px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- grid item -->
+          <div
+            class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[288] flex flex-col items-center text-center"
+          >
+            <!-- grid item icon -->
+            <div class="mb-[15px]">
+              <img src="assets/icons/services/user-id-svgrepo-com.svg" alt="" />
+            </div>
+            <!-- grid item title -->
+            <h3 class="h3 mb-[10px]">Profesores</h3>
+            <!-- grid item description-->
+            <p class="leading-normal max-w-[300px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end services -->
+
+    <!--appointment-->
+    <section class="appointment section">
+      <div class="container mx-auto">
+        <h2
+          class="appointment__title h2 mb-5 xl:mb-[50px] text-center xl:text-left"
+        >
+          Llama o escribe a un asesor:
+          <span class="text-accent-tertiary">(+52) 4434764107</span>
+        </h2>
+        <!-- form -->
+        <form class="appointment__form flex flex-col gap-y-5">
+          <!-- select wrapper -->
+          <div class="flex justify-center">
+            <!-- select 1-->
+            <div class="bg-blue-100 select relative flex items-center">
+              <!-- icon -->
+              <div class="absolute right-4">
+                <i class="ri-arrow-down-s-line text-[26px] text-primary"></i>
+              </div>
+              <!-- select -->
+              <select
+                class="appearance-none outline-none h-full w-full bg-transparent px-4"
+              >
+                <option value="1">Selecciona una especialidad</option>
+                <option value="2">Endodoncia</option>
+                <option value="3">Ortodoncia</option>
+                <option value="4">Ambas</option>
+              </select>
+            </div>
+          </div>
+          <!-- input wrapper-->
+          <div class="flex flex-col xl:flex-row gap-5">
+            <input type="text" class="input" placeholder="Nombre" />
+            <input type="text" class="input" placeholder="Apellido" />
+          </div>
+          <input type="text" class="input" placeholder="Telefono" />
+          <input type="text" class="input" placeholder="Email" />
+          <input type="text" class="input" placeholder="Ciudad" />
+          <button class="btn btn-lg btn-accent self-start" type="submit">
+            Enviar
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- end appointment -->
+
+    <!-- testimonials-->
+    <section
+      class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat py-12 xl:min-h-[595px] xl:py-0"
+    >
+      <div class="testimonial__container container mx-auto">
+        <div class="flex flex-col items-center gap-x-14 xl:flex-row">
+          <!-- img -->
+          <div class="hidden xl:flex">
+            <img src="assets/img/testimonials/img.png" alt="" />
+          </div>
+          <!-- slider -->
+          <div class="max-w-[98%] xl:mx-w-[710px]">
+            <!-- Slider main container -->
+            <div class="swiper h-[400px]">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slide 1-->
+                <div class="swiper-slide">
+                  <div class="h-full flex flex-col justify-center items-start">
+                    <div class="max-w-[680px] mx-auto text-center xl:text-left">
+                      <p
+                        class="font-light relative text-[22px] text-[#4c5354] leading-[190%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat mb-7"
+                      >
+                        <!-- message -->
+                        <span class="mx-2"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Voluptatem culpa atque in at repudiandae?
+                          Consequatur, cumque officia? Numquam reprehenderit
+                          praesentium impedit molestiae iste.</span
+                        >
+                      </p>
+                      <!-- name -->
+                      <div class="text-[26px] text-[#4c5354] font-semibold">
+                        Brandon Hinojosa
+                      </div>
+                      <!-- position -->
+                      <div
+                        class="text-[#9ab4b7] font-medium uppercase tracking-[2.24px]"
+                      >
+                        Egresado
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 2-->
+                <div class="swiper-slide">
+                  <div class="h-full flex flex-col justify-center items-start">
+                    <div class="max-w-[680px] mx-auto text-center xl:text-left">
+                      <p
+                        class="font-light relative text-[22px] text-[#4c5354] leading-[190%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat mb-7"
+                      >
+                        <!-- message -->
+                        <span class="mx-2"
+                          >Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Voluptatem culpa atque in at repudiandae?
+                          Consequatur, cumque officia? Numquam reprehenderit
+                          praesentium impedit molestiae iste.</span
+                        >
+                      </p>
+                      <!-- name -->
+                      <div class="text-[26px] text-[#4c5354] font-semibold">
+                        Daniela Guzman
+                      </div>
+                      <!-- position -->
+                      <div
+                        class="text-[#9ab4b7] font-medium uppercase tracking-[2.24px]"
+                      >
+                        Egresado
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- swipper pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end testimonials-->
+
+    <!--team-->
+    <section class="team section">
+      <div class="container mx-auto">
+        <h2 class="team__title h2 mb-[50px] text-center xl:text-left">
+          Nuestro Equipo
+        </h2>
+        <!-- slider -->
+        <div class="team__slider swiper min-h-[400px]">
+         <!-- Additional required wrapper -->
+         <div class="swiper-wrapper">
+          <!-- Slide 1-->
+          <div class="swiper-slide">
+            <div class="flex flex-col md:flex-row gap-9">
+              <!-- item -->
+              <div class="flex-1 flex flex-col xl:flex-row">
+                <div class="flex flex-col xl:flex-row items-center gap-[30px]">
+                  <!-- img -->
+                  <div class="flex-1">
+                    <img src="assets/img/team/doctor-1.png" alt="">
+                  </div>
+                  <!-- info -->
+                  <div class="flex-1 flex flex-col">
+                    <!-- name -->
+                    <h4 class="h4 mb-[10px]"> Dr. Victor</h4>
+                    <!-- position -->
+                    <div class="font-medium uppercase tracking-[2.24px] text-[#9ab4b7] mb-[20px]">Director</div>
+                    <!-- desc -->
+                    <p class="font-light mb-[26px] max-w-[320px]">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <!-- socials -->
+                    <div class="flex items-center text-[30px] gap-x-5 text-accent-tertiary">
+                      <a href="#" class=" cursor-pointer hover:text-accent transition-all">
+                        <i class="ri-facebook-fill"></i>
+                      </a>
+                      <a href="#" class=" cursor-pointer hover:text-accent transition-all">
+                        <i class="ri-instagram-fill"></i>
+                      </a>
+                      <a href="#" class=" cursor-pointer hover:text-accent transition-all">
+                        <i class="ri-linkedin-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="flex-1 flex flex-col xl:flex-row">
+                <div class="flex flex-col xl:flex-row items-center gap-[30px]">
+                  <!-- img -->
+                  <div class="flex-1">
+                    <img src="assets/img/team/doctor-1.png" alt="">
+                  </div>
+                  <!-- info -->
+                  <div class="flex-1 flex flex-col">
+                    <!-- name -->
+                    <h4 class="h4 mb-[10px]"> Dr. Victor</h4>
+                    <!-- position -->
+                    <div class="font-medium uppercase tracking-[2.24px] text-[#9ab4b7] mb-[20px]">Director</div>
+                    <!-- desc -->
+                    <p class="font-light mb-[26px] max-w-[320px]">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <!-- socials -->
+                    <div class="flex items-center text-[30px] gap-x-5 text-accent-tertiary">
+                      <a href="#" class=" cursor-pointer hover:text-accent transition-all">
+                        <i class="ri-facebook-fill"></i>
+                      </a>
+                      <a href="#" class=" cursor-pointer hover:text-accent transition-all">
+                        <i class="ri-instagram-fill"></i>
+                      </a>
+                      <a href="#" class=" cursor-pointer hover:text-accent transition-all">
+                        <i class="ri-linkedin-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <!-- Slide 2-->
+          <div class="swiper-slide">
+            <div class="flex flex-col md:flex-row gap-9">
+              <!-- item -->
+              <div class="flex-1 flex flex-col xl:flex-row">
+                <div class="flex flex-col xl:flex-row items-center gap-[30px]">
+                  <!-- img -->
+                  <div class="flex-1">
+                    <img src="assets/img/team/doctor-1.png" alt="">
+                  </div>
+                  <!-- info -->
+                  <div class="flex-1 flex flex-col">
+                    <!-- name -->
+                    <h4 class="h4 mb-[10px]"> Dr. Victor</h4>
+                    <!-- position -->
+                    <div class="font-medium uppercase tracking-[2.24px] text-[#9ab4b7] mb-[20px]">Director</div>
+                    <!-- desc -->
+                    <p class="font-light mb-[26px] max-w-[320px]">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <!-- socials -->
+                    <div class="flex items-center text-[30px] gap-x-5 text-accent-tertiary">
+                      <a href="#" class=" cursor-pointer hover:text-accent transition-all">
+                        <i class="ri-facebook-fill"></i>
+                      </a>
+                      <a href="#" class=" cursor-pointer hover:text-accent transition-all">
+                        <i class="ri-instagram-fill"></i>
+                      </a>
+                      <a href="#" class=" cursor-pointer hover:text-accent transition-all">
+                        <i class="ri-linkedin-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="flex-1 flex flex-col xl:flex-row">
+                <div class="flex flex-col xl:flex-row items-center gap-[30px]">
+                  <!-- img -->
+                  <div class="flex-1">
+                    <img src="assets/img/team/doctor-1.png" alt="">
+                  </div>
+                  <!-- info -->
+                  <div class="flex-1 flex flex-col">
+                    <!-- name -->
+                    <h4 class="h4 mb-[10px]"> Dr. Victor</h4>
+                    <!-- position -->
+                    <div class="font-medium uppercase tracking-[2.24px] text-[#9ab4b7] mb-[20px]">Director</div>
+                    <!-- desc -->
+                    <p class="font-light mb-[26px] max-w-[320px]">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <!-- socials -->
+                    <div class="flex items-center text-[30px] gap-x-5 text-accent-tertiary">
+                      <a href="#" class=" cursor-pointer hover:text-accent transition-all">
+                        <i class="ri-facebook-fill"></i>
+                      </a>
+                      <a href="#" class=" cursor-pointer hover:text-accent transition-all">
+                        <i class="ri-instagram-fill"></i>
+                      </a>
+                      <a href="#" class=" cursor-pointer hover:text-accent transition-all">
+                        <i class="ri-linkedin-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- swipper pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!--end team-->
+
+    <!-- faq -->
+    <section class="faq">
+      <div class="container mx-auto">
+        <h2 class="faq__title h2 text-center mb-[50px]">Tenemos respuestas</h2>
+        <!-- item wrapper -->
+        <div class="max-w-5xl mx-auto">
+          <!-- item -->
+          <div 
+          class="faq__item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+            <!--title & icon-->
+            <div class="flex items-center justify-between mb-[10px]">
+              <!-- title -->
+              <h4 class="h4"> Por que estudiar con nosotros</h4>
+              <!-- icon -->
+              <div class="faq__btn text-accent">
+                <i class="ri-add-fill text-2xl"></i>
+              </div>
+            </div>
+            <!-- answer text -->
+            <div class="faq__anwser h-0 overflow-hidden">
+              <p class="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eos iure, sint ut atque perferendis alias nulla ipsam aperiam id veritatis nihil maiores exercitationem quasi earum necessitatibus voluptatum excepturi sapiente.</p>
+            </div>
+          </div>
+          <!-- item -->
+          <div 
+          class="faq__item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+            <!--title & icon-->
+            <div class="flex items-center justify-between mb-[10px]">
+              <!-- title -->
+              <h4 class="h4"> Por que estudiar con nosotros</h4>
+              <!-- icon -->
+              <div class="faq__btn text-accent">
+                <i class="ri-add-fill text-2xl"></i>
+              </div>
+            </div>
+            <!-- answer text -->
+            <div class="faq__anwser h-0 overflow-hidden">
+              <p class="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eos iure, sint ut atque perferendis alias nulla ipsam aperiam id veritatis nihil maiores exercitationem quasi earum necessitatibus voluptatum excepturi sapiente.</p>
+            </div>
+          </div>
+          <!-- item -->
+          <div 
+          class="faq__item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+            <!--title & icon-->
+            <div class="flex items-center justify-between mb-[10px]">
+              <!-- title -->
+              <h4 class="h4"> Por que estudiar con nosotros</h4>
+              <!-- icon -->
+              <div class="faq__btn text-accent">
+                <i class="ri-add-fill text-2xl"></i>
+              </div>
+            </div>
+            <!-- answer text -->
+            <div class="faq__anwser h-0 overflow-hidden">
+              <p class="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eos iure, sint ut atque perferendis alias nulla ipsam aperiam id veritatis nihil maiores exercitationem quasi earum necessitatibus voluptatum excepturi sapiente.</p>
+            </div>
+          </div>
+          <!-- item -->
+          <div 
+          class="faq__item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+            <!--title & icon-->
+            <div class="flex items-center justify-between mb-[10px]">
+              <!-- title -->
+              <h4 class="h4"> Por que estudiar con nosotros</h4>
+              <!-- icon -->
+              <div class="faq__btn text-accent">
+                <i class="ri-add-fill text-2xl"></i>
+              </div>
+            </div>
+            <!-- answer text -->
+            <div class="faq__anwser h-0 overflow-hidden">
+              <p class="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eos iure, sint ut atque perferendis alias nulla ipsam aperiam id veritatis nihil maiores exercitationem quasi earum necessitatibus voluptatum excepturi sapiente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end faq -->
+
+    <!-- footer -->
+    <footer class="footer pt-12 xl:pt-[150px] bg-blue-100">
+      <div class="container mx-auto pb-12 xl:pb-[100px]">
+        <div class="flex flex-col xl:flex-row gap-x-5 gap-y-10" >
+          <!-- footer contact section -->
+          <div class="footer__item flex-1">
+            <!-- logo -->
+            <a href="">
+              <img class="mb-[30px]" src="assets/img/header/logo.png" alt="">
+            </a>
+            <!-- desc -->
+            <p class="mb-[20px]">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni eligendi neque esse illo.
+            </p>
+            <!-- location, email & phone -->
+            <div class="flex flex-col gap-y-3 mb-10">
+              <div class="flex items-center gap-x-[6px]">
+                <i class="ri-map-pin-fill text-[24px] text-accent"></i>
+                <div>
+                  H. Colegio Militar 528, Morelia, Mich.
+                </div>
+                
+              </div>
+              <div class="flex items-center gap-x-[6px]">
+                <i class="ri-mail-fill text-[24px] text-accent"></i>
+                <div>
+                  InstitutoImbo@gmail.com
+                </div>
+               
+              </div>
+              <div class="flex items-center gap-x-[6px]">
+                <i class="ri-phone-fill text-[24px] text-accent"></i>
+                <div>
+                  (+52) 443 476 4107
+                </div>
+                
+              </div>
+            </div>
+            <!-- socials -->
+            <div class="flex gap-[14px] text-[30px]">
+              <div class="p-[10px] rounded-[10px] shadow-custom2 text-accent-tertiary hover:text-accent cursor-pointer transition-all">
+                <i class="ri-facebook-circle-fill"></i>
+              </div>
+              <div class="p-[10px] rounded-[10px] shadow-custom2 text-accent-tertiary hover:text-accent cursor-pointer transition-all">
+                <i class="ri-instagram-fill"></i>
+              </div>
+              <div class="p-[10px] rounded-[10px] shadow-custom2 text-accent-tertiary hover:text-accent cursor-pointer transition-all">
+                <i class="ri-linkedin-box-fill"></i>
+              </div>
+            </div>
+          </div>
+          <!-- footer quick links section -->
+          <div class="footer__item flex-1">
+            <h4 class="h4 mb-5">Enlaces rápidos</h4>
+            <div class="flex gap-x-5">
+              <!-- list 1 -->
+              <ul class="flex-1 flex flex-col gap-y-5">
+                <li><a href="#" class="hover:text-accent transition-all">Inicio</a></li>
+                <li><a href="#" class="hover:text-accent transition-all">Estudia</a></li>
+                <li><a href="#" class="hover:text-accent transition-all">Conócenos</a></li>
+                <li><a href="#" class="hover:text-accent transition-all">Admisiones</a></li>
+              </ul>
+              <!-- list 2 -->
+              <ul class="flex-1 flex flex-col gap-y-5">
+                <li><a href="#" class="hover:text-accent transition-all">Precios</a></li>
+                <li><a href="#" class="hover:text-accent transition-all">Contacto</a></li>
+                <li><a href="#" class="hover:text-accent transition-all">Especialidades</a></li>
+                <li><a href="#" class="hover:text-accent transition-all">Faqs</a></li>
+                <li><a href="#" class="hover:text-accent transition-all"> Politicas de privacidad</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- footer opening hours section-->
+          <div class="footer__item flex-1">
+            <h4 class="h4 mb-5">Horario de atención</h4>
+            <!-- opening hours -->
+            <div class="flex flex-col gap-5 ">
+              <!-- item -->
+              <div 
+              class="flex-1">
+                <div class="flex justify-between items-center botder-b pb-[10px]">
+                  <div>Lunes - Viernes</div>
+                  <div class="text-accent font-medium">10:00 am - 5:00pm</div>
+                </div>
+              </div>
+              <div 
+              class="flex-1">
+                <div class="flex justify-between items-center botder-b pb-[10px]">
+                  <div>Sábado</div>
+                  <div class="text-accent font-medium">10:00 am - 2:00pm</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="py-[30px] border-t">
+        <div class="container mx-auto text-center">
+          <div class="font-light text-base">&copy; 2023 IMBO - Todos los derechos reservados </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- temp div-->
+    <div class=""></div>
+    <!-- script -->
+    <!-- swiper js -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- scroll reveal -->
+    <script src="js/scrollreveal.min.js"></script>
+    <!-- main -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
